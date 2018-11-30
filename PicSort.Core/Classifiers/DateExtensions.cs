@@ -21,7 +21,7 @@ namespace PicSort.Core.Classifiers
                 case DateInterval.Month:
                     return new DateTime(1, date.Month, 1).ToString("M").Split(' ')[0];
                 case DateInterval.Day:
-                    return new DateTime(1, 1, date.Day).ToString("D").Split(',')[0];
+                    return date.Day + "-" + new DateTime(1, 1, date.Day).ToString("D").Split(',')[0];
                 case DateInterval.Year:
                     return date.Year.ToString();
                 case DateInterval.Hour:

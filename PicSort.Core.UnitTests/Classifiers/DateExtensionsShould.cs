@@ -32,7 +32,7 @@ namespace PicSort.Core.UnitTests.Classifiers
             var days = new List<string> { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
             for (int i = 0; i < days.Count; i++)
             {
-                new DateTime(1, 1, i + 1).GetName(DateInterval.Day).Should().Be(days[i]);
+                new DateTime(1, 1, i + 1).GetName(DateInterval.Day).Should().Be($"{i + 1}-{days[i]}");
             }
         }
 

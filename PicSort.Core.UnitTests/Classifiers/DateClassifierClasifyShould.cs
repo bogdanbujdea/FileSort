@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using FluentAssertions;
+﻿using FluentAssertions;
+
 using PicSort.Core.Classifiers;
+
+using System;
+using System.Collections.Generic;
+
 using Xunit;
 
 namespace PicSort.Core.UnitTests.Classifiers
 {
-    public class DateClassifieClasifyShoud
+    public class DateClassifierClasifyShould
     {
         [Fact]
         public void receive_a_list_of_images()

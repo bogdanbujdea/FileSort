@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PicSort.Core", "PicSort.Cor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PicSort.Core.UnitTests", "PicSort.Core.UnitTests\PicSort.Core.UnitTests.csproj", "{0BD4DBEE-41B8-4E97-A014-60B801840EEC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PicSort.CLI", "src\PicSort.CLI\PicSort.CLI.csproj", "{2C7365DC-349E-4B52-A70E-7CF7957B06E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{0BD4DBEE-41B8-4E97-A014-60B801840EEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BD4DBEE-41B8-4E97-A014-60B801840EEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BD4DBEE-41B8-4E97-A014-60B801840EEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C7365DC-349E-4B52-A70E-7CF7957B06E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C7365DC-349E-4B52-A70E-7CF7957B06E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C7365DC-349E-4B52-A70E-7CF7957B06E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C7365DC-349E-4B52-A70E-7CF7957B06E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +38,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{B373C891-F46A-41A5-B00B-C8A82CBA22C9} = {93E24B7F-DE3E-4FBB-9EB4-92A0258397B6}
 		{0BD4DBEE-41B8-4E97-A014-60B801840EEC} = {E0315440-BA84-40AE-8803-92812177EE73}
+		{2C7365DC-349E-4B52-A70E-7CF7957B06E2} = {93E24B7F-DE3E-4FBB-9EB4-92A0258397B6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B858258D-28BC-45C2-BDF9-34DD35B11783}

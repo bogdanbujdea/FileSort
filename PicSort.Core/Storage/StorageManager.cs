@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using PicSort.Core.Classifiers;
+
 using System.IO;
 using System.Linq;
-using PicSort.Core.Classifiers;
 
 namespace PicSort.Core.Storage
 {
@@ -30,6 +30,7 @@ namespace PicSort.Core.Storage
             _classifier.Classify(images, moveInfo.Interval, moveInfo.UseAllIntervals);
             foreach (var imageInfo in images)
             {
+                Directory.CreateDirectory(new FileInfo(imageInfo.NewPath).Directory.FullName);
                 File.Move(imageInfo.CurrentPath, imageInfo.NewPath);
             }
         }
