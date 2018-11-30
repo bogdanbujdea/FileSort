@@ -6,32 +6,29 @@ namespace PicSort.Core.Classifiers
     {
         public void Classify(List<ImageInfo> images, DateInterval interval = DateInterval.Day, bool useAllIntervals = false)
         {
-            if (useAllIntervals)
+            foreach (var image in images)
             {
-                foreach (var image in images)
+                if (!useAllIntervals)
                 {
-                    var initialPath = image.CurrentPath;
-                    for (var i = (int)DateInterval.Year; i >= (int) interval; i--)
-                    {
-                        image.NewPath = DirectoryBuilder.BuildNewPath(image, (DateInterval)i);
-                        image.CurrentPath = image.NewPath;
-                    }
-
-                    image.CurrentPath = initialPath;
+                    image.NewPath = DirectoryBuilder.BuildNewPath(image, interval);
                 }
-            }
-            else
-            {
-                AppendDateNameToPath(images, interval);
+                else
+                {
+                    ApplyMultipleIntervals(interval, image);
+                }
             }
         }
 
-        private void AppendDateNameToPath(List<ImageInfo> images, DateInterval interval)
+        private void ApplyMultipleIntervals(DateInterval interval, ImageInfo image)
         {
-            foreach (var imageInfo in images)
+            var initialPath = image.CurrentPath;
+            for (var i = (int) DateInterval.Year; i >= (int) interval; i--)
             {
-                imageInfo.NewPath = DirectoryBuilder.BuildNewPath(imageInfo, interval);
+                image.NewPath = DirectoryBuilder.BuildNewPath(image, (DateInterval) i);
+                image.CurrentPath = image.NewPath;
             }
+
+            image.CurrentPath = initialPath;
         }
     }
 }
