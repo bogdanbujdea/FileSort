@@ -43,7 +43,7 @@ namespace PicSort.Core.UnitTests.Classifiers
         {
             _imageInfo.ModifiedDate = new DateTime(1, 1, 1);
             var newPath = DirectoryBuilder.BuildNewPath(_imageInfo, DateInterval.Day);
-            newPath.Should().Be(@"d:\Monday\test.jpg");
+            newPath.Should().Be(@"d:\1-Monday\test.jpg");
         }
 
         [Fact]

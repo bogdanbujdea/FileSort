@@ -11,7 +11,7 @@ namespace PicSort.Core.Classifiers
                 foreach (var image in images)
                 {
                     var initialPath = image.CurrentPath;
-                    for (var i = (int)DateInterval.Year; i > 0; i--)
+                    for (var i = (int)DateInterval.Year; i >= (int) interval; i--)
                     {
                         image.NewPath = DirectoryBuilder.BuildNewPath(image, (DateInterval)i);
                         image.CurrentPath = image.NewPath;

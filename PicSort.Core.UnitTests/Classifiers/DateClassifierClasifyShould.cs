@@ -42,9 +42,21 @@ namespace PicSort.Core.UnitTests.Classifiers
             };
 
             dateClassifier.Classify(images, DateInterval.Hour, true);
-            images[0].NewPath.Should().Be(@"d:\1\January\Monday\12 AM\test.jpg");
+            images[0].NewPath.Should().Be(@"d:\1\January\1-Monday\12 AM\test.jpg");
         }
 
+        [Fact]
+        public void create_directory_only_until_specified_interval_when_required()
+        {
+            var dateClassifier = new DateClassifier();
+            var images = new List<ImageInfo>
+            {
+                BuildImageInfo("test.jpg", new DateTime(1, 1, 1)),
+            };
+
+            dateClassifier.Classify(images, DateInterval.Month, true);
+            images[0].NewPath.Should().Be(@"d:\1\January\test.jpg");
+        }
 
         private ImageInfo BuildImageInfo(string fileName, DateTime modifiedDate)
         {

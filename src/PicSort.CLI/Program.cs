@@ -10,10 +10,10 @@ namespace PicSort.CLI
             var manager = new StorageManager(new DateClassifier());
             manager.MoveFiles(new MoveInfo
             {
-                Interval = DateInterval.Month,
-                DirectoryPath = @"d:\test",
+                Interval = DateInterval.Day,
+                DirectoryPath = @"D:\png",
                 Recursive = true,
-                UseAllIntervals = false
+                UseAllIntervals = true
             });
         }
     }
