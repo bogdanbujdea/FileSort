@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PicSort.Core\PicSort.Core.csproj" />
+    <ProjectReference Include="..\..\src\PicSort.Core\PicSort.Core.csproj" />
   </ItemGroup>
 
 </Project>

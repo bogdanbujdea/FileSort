@@ -2,7 +2,7 @@
 
 namespace PicSort.Core.Classifiers
 {
-    public class ImageInfo
+    public class MediaFileInfo
     {
         public string CurrentPath { get; set; }
 

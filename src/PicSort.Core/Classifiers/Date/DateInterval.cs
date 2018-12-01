@@ -1,4 +1,4 @@
-﻿namespace PicSort.Core.Classifiers
+﻿namespace PicSort.Core.Classifiers.Date
 {
     public enum DateInterval
     {

@@ -7,9 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{93E24B7F-DE3
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E0315440-BA84-40AE-8803-92812177EE73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PicSort.Core", "PicSort.Core\PicSort.Core.csproj", "{B373C891-F46A-41A5-B00B-C8A82CBA22C9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PicSort.Core", "src\PicSort.Core\PicSort.Core.csproj", "{B373C891-F46A-41A5-B00B-C8A82CBA22C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PicSort.Core.UnitTests", "PicSort.Core.UnitTests\PicSort.Core.UnitTests.csproj", "{0BD4DBEE-41B8-4E97-A014-60B801840EEC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PicSort.Core.UnitTests", "tests\PicSort.Core.UnitTests\PicSort.Core.UnitTests.csproj", "{0BD4DBEE-41B8-4E97-A014-60B801840EEC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PicSort.CLI", "src\PicSort.CLI\PicSort.CLI.csproj", "{2C7365DC-349E-4B52-A70E-7CF7957B06E2}"
 EndProject

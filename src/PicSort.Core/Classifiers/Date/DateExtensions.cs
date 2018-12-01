@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PicSort.Core.Classifiers
+namespace PicSort.Core.Classifiers.Date
 {
     public static class DateExtensions
     {

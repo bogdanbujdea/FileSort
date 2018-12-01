@@ -1,9 +1,10 @@
 ﻿using FluentAssertions;
 
-using PicSort.Core.Classifiers;
+using PicSort.Core.Classifiers.Date;
 
 using System;
 using System.Collections.Generic;
+
 using Xunit;
 
 namespace PicSort.Core.UnitTests.Classifiers

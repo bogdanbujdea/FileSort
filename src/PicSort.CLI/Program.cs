@@ -1,5 +1,5 @@
 ﻿using PicSort.Core.Storage;
-using PicSort.Core.Classifiers;
+using PicSort.Core.Classifiers.Date;
 
 namespace PicSort.CLI
 {
@@ -7,14 +7,16 @@ namespace PicSort.CLI
     {
         static void Main(string[] args)
         {
-            var manager = new StorageManager(new DateClassifier());
-            manager.MoveFiles(new MoveInfo
+            var dateClassifier = new DateClassifier();
+            var manager = new StorageManager(dateClassifier);
+            var dateClassifierArgs = new DateClassifierArgs
             {
                 Interval = DateInterval.Day,
                 DirectoryPath = @"D:\png",
                 Recursive = true,
                 UseAllIntervals = true
-            });
+            };
+            manager.MoveFiles(dateClassifierArgs);
         }
     }
 }
