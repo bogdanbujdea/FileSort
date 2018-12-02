@@ -15,6 +15,10 @@ namespace PicSort.Core.Classifiers.Date
             {
                 throw new ArgumentNullException(nameof(images));
             }
+            if (dateArgs == null)
+            {
+                throw new ArgumentNullException(nameof(dateArgs));
+            }
             foreach (var image in images)
             {
                 if (!dateArgs.UseAllIntervals)

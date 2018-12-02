@@ -28,6 +28,13 @@ namespace PicSort.Core.UnitTests.Classifiers.DateClassifier
         }
 
         [Fact]
+        public void throw_when_args_are_not_set()
+        {
+            Action action = () => new Core.Classifiers.Date.DateClassifier().Classify(new List<MediaFileInfo>(), null); 
+            action.Should().Throw<ArgumentNullException>();
+        }
+
+        [Fact]
         public void set_new_path_for_each_image()
         {
             var dateClassifier = new Core.Classifiers.Date.DateClassifier();

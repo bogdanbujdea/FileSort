@@ -1,9 +1,11 @@
-﻿namespace PicSort.Core.Storage
+﻿using PicSort.Core.Classifiers.Date;
+
+namespace PicSort.Core.Storage
 {
     public abstract class ClassifierArgs
     {
-        public bool Recursive { get; set; }
-        
+        public RecursiveMode RecursiveMode { get; set; }
+
         public string DirectoryPath { get; set; }
     }
 }

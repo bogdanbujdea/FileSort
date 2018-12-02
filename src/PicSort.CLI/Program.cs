@@ -8,15 +8,15 @@ namespace PicSort.CLI
         static void Main(string[] args)
         {
             var dateClassifier = new DateClassifier();
-            var manager = new StorageManager(dateClassifier);
+            var manager = new StorageManager(dateClassifier, new StorageUtilities());
             var dateClassifierArgs = new DateClassifierArgs
             {
                 Interval = DateInterval.Day,
                 DirectoryPath = @"D:\png",
-                Recursive = true,
+                RecursiveMode = RecursiveMode.RootFolder,
                 UseAllIntervals = true
             };
-            manager.MoveFiles(dateClassifierArgs);
+            manager.OrganizeDirectory(dateClassifierArgs);
         }
     }
 }
