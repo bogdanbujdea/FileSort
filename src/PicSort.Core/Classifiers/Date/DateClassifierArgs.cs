@@ -9,13 +9,13 @@ namespace PicSort.Core.Classifiers.Date
             
         }
 
-        public DateClassifierArgs(DateInterval interval, bool useAllIntervals = false)
+        public DateClassifierArgs(DateInterval interval, bool useMultipleClassifiers = false)
         {
             Interval = interval;
-            UseAllIntervals = useAllIntervals;
+            UseMultipleClassifiers = useMultipleClassifiers;
         }
 
-        public bool UseAllIntervals { get; set; }
+        public bool UseMultipleClassifiers { get; set; }
 
         public DateInterval Interval { get; set; }
     }

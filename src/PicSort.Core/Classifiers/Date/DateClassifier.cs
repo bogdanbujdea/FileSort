@@ -21,7 +21,7 @@ namespace PicSort.Core.Classifiers.Date
             }
             foreach (var image in images)
             {
-                if (!dateArgs.UseAllIntervals)
+                if (!dateArgs.UseMultipleClassifiers)
                 {
                     image.NewPath = DirectoryBuilder.BuildNewPathByDate(image, dateArgs.Interval);
                 }
