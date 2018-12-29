@@ -1,7 +1,10 @@
-﻿using System.IO;
+﻿using System;
 using McMaster.Extensions.CommandLineUtils;
+
 using PicSort.Core.Storage;
 using PicSort.Core.Classifiers.Date;
+
+using System.IO;
 
 namespace PicSort.CLI
 {
@@ -23,12 +26,17 @@ namespace PicSort.CLI
         [Option(Description = "year/month/day/hour", ShortName = "i")]
         public DateInterval Interval { get; set; }
 
+        [Option(Description = "Move all files to root", ShortName = "m")]
+        public bool MoveToRoot{ get; set; }
+
         private void OnExecute()
         {
             var dateClassifier = new DateClassifier();
             if (WorkingDirectory == null)
                 WorkingDirectory = Directory.GetCurrentDirectory();
-            var manager = new StorageManager(dateClassifier, new StorageUtilities());
+            var storageUtilities = new StorageUtilities();
+            var manager = new StorageManager(dateClassifier, storageUtilities);
+
             var dateClassifierArgs = new DateClassifierArgs
             {
                 Interval = Interval,
@@ -36,6 +44,12 @@ namespace PicSort.CLI
                 RecursiveMode = Recursive ? RecursiveMode.RootFolder : RecursiveMode.None,
                 UseMultipleClassifiers = UseMultipleClassifiers
             };
+            if (MoveToRoot)
+            {
+                Console.WriteLine("Moving files to root");
+                storageUtilities.MoveFilesToRoot(dateClassifierArgs);
+                return;
+            }
             manager.OrganizeDirectory(dateClassifierArgs);
         }
     }

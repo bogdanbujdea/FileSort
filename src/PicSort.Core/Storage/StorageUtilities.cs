@@ -1,6 +1,7 @@
 ﻿using PicSort.Core.Classifiers;
 using PicSort.Core.Classifiers.Date;
 
+using System;
 using System.IO;
 using System.Linq;
 using System.Collections.Generic;
@@ -23,8 +24,7 @@ namespace PicSort.Core.Storage
             IEnumerable<string> files;
             if (args.RecursiveMode == RecursiveMode.RootFolder)
             {
-                files = Directory.GetFiles(args.DirectoryPath, searchPattern: "*.*", searchOption: SearchOption.AllDirectories);
-                MoveFilesToRoot(args, files);
+                MoveFilesToRoot(args);
                 files = Directory.GetFiles(args.DirectoryPath, searchPattern: "*.*", searchOption: SearchOption.AllDirectories);
             }
             else
@@ -44,8 +44,9 @@ namespace PicSort.Core.Storage
             return images;
         }
 
-        private void MoveFilesToRoot(ClassifierArgs args, IEnumerable<string> files)
+        public void MoveFilesToRoot(ClassifierArgs args)
         {
+            var files = Directory.GetFiles(args.DirectoryPath, searchPattern: "*.*", searchOption: SearchOption.AllDirectories);
             foreach (var file in files)
             {
                 try
@@ -58,6 +59,8 @@ namespace PicSort.Core.Storage
                     HandleNameCollision(args, file);
                 }
             }
+
+            Console.WriteLine($"Moved {files.Count()} to root directory");
         }
 
         private void HandleNameCollision(ClassifierArgs args, string file)
@@ -68,6 +71,7 @@ namespace PicSort.Core.Storage
             while (true)
             {
                 var newPath = $"{fileNameWithoutExtension}-{suffix}{fileInfo.Extension}";
+                Console.WriteLine($"Name conflict for {fileInfo.Name}");
                 if (File.Exists(Path.Combine(args.DirectoryPath,
                     newPath)))
                 {

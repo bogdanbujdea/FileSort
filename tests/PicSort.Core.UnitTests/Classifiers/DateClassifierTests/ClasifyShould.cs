@@ -9,35 +9,42 @@ using System.Collections.Generic;
 
 using Xunit;
 
-namespace PicSort.Core.UnitTests.Classifiers.DateClassifier
+namespace PicSort.Core.UnitTests.Classifiers.DateClassifierTests
 {
     public class ClasifyShould
     {
+        DateClassifier _dateClassifier;
+
+        public ClasifyShould()
+        {
+            _dateClassifier = new DateClassifier();
+        }
+
         [Fact]
         public void receive_a_list_of_images()
         {
-            Action action = () => new Core.Classifiers.Date.DateClassifier().Classify(new List<MediaFileInfo>(), new DateClassifierArgs());
+            Action action = () => _dateClassifier.Classify(new List<MediaFileInfo>(), new DateClassifierArgs());
             action.Should().NotThrow();
         }
 
         [Fact]
         public void throw_when_list_is_null()
         {
-            Action action = () => new Core.Classifiers.Date.DateClassifier().Classify(null, new DateClassifierArgs());
+            Action action = () => _dateClassifier.Classify(null, new DateClassifierArgs());
             action.Should().Throw<ArgumentNullException>();
         }
 
         [Fact]
         public void throw_when_args_are_not_set()
         {
-            Action action = () => new Core.Classifiers.Date.DateClassifier().Classify(new List<MediaFileInfo>(), null); 
+            Action action = () => _dateClassifier.Classify(new List<MediaFileInfo>(), null);
             action.Should().Throw<ArgumentNullException>();
         }
 
         [Fact]
         public void set_new_path_for_each_image()
         {
-            var dateClassifier = new Core.Classifiers.Date.DateClassifier();
+            var dateClassifier = _dateClassifier;
             var images = new List<MediaFileInfo>
             {
                 BuildImageInfo("test.jpg", new DateTime(1, 1, 1))
@@ -51,7 +58,7 @@ namespace PicSort.Core.UnitTests.Classifiers.DateClassifier
         [Fact]
         public void create_directory_for_each_interval_when_it_is_required()
         {
-            var dateClassifier = new Core.Classifiers.Date.DateClassifier();
+            var dateClassifier = _dateClassifier;
             var images = new List<MediaFileInfo>
             {
                 BuildImageInfo("test.jpg", new DateTime(1, 1, 1)),
@@ -64,7 +71,7 @@ namespace PicSort.Core.UnitTests.Classifiers.DateClassifier
         [Fact]
         public void create_directory_only_until_specified_interval_when_required()
         {
-            var dateClassifier = new Core.Classifiers.Date.DateClassifier();
+            var dateClassifier = _dateClassifier;
             var images = new List<MediaFileInfo>
             {
                 BuildImageInfo("test.jpg", new DateTime(1, 1, 1)),
