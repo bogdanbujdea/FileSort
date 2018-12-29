@@ -60,7 +60,7 @@ namespace PicSort.Core.Storage
                 }
             }
 
-            Console.WriteLine($"Moved {files.Count()} to root directory");
+            Console.WriteLine($"Moved {files.Length} to root directory");
         }
 
         private void HandleNameCollision(ClassifierArgs args, string file)
