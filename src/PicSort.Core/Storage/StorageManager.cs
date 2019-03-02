@@ -1,4 +1,7 @@
-﻿using PicSort.Core.Classifiers;
+﻿using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using PicSort.Core.Classifiers;
 
 namespace PicSort.Core.Storage
 {
@@ -18,6 +21,11 @@ namespace PicSort.Core.Storage
             var files = _storageUtilities.RetrieveMediaFiles(args);
             _classifier.Classify(files, args);
             _storageUtilities.MoveFiles(files);
+        }
+
+        public List<string> GetFiles(string path)
+        {
+            return Directory.GetFiles(path).ToList();
         }
     }
 }

@@ -1,8 +1,9 @@
-﻿using System;
-using McMaster.Extensions.CommandLineUtils;
+﻿using McMaster.Extensions.CommandLineUtils;
 
 using PicSort.Core.Storage;
 using PicSort.Core.Classifiers.Date;
+
+using System;
 
 using System.IO;
 
@@ -10,7 +11,6 @@ namespace PicSort.CLI
 {
     class Program
     {
-
         public static int Main(string[] args)
             => CommandLineApplication.Execute<Program>(args);
 

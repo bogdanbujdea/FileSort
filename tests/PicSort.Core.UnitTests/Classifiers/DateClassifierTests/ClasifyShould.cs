@@ -69,6 +69,19 @@ namespace PicSort.Core.UnitTests.Classifiers.DateClassifierTests
         }
 
         [Fact]
+        public void use_the_correct_day_of_the_week()
+        {
+            var dateClassifier = _dateClassifier;
+            var images = new List<MediaFileInfo>
+            {
+                BuildImageInfo("test.jpg", new DateTime(2019, 1, 1)),
+            };
+
+            dateClassifier.Classify(images, new DateClassifierArgs(DateInterval.Hour, true));
+            images[0].NewPath.Should().Be(@"d:\2019\January\1-Tuesday\12 AM\test.jpg");
+        }
+
+        [Fact]
         public void create_directory_only_until_specified_interval_when_required()
         {
             var dateClassifier = _dateClassifier;
