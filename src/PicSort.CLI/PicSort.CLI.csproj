@@ -7,6 +7,7 @@
     <ToolCommandName>sort-files</ToolCommandName>
     <PackageOutputPath>./nupkg</PackageOutputPath>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RuntimeFrameworkVersion>2.1.0</RuntimeFrameworkVersion>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\PicSort.Core\PicSort.Core.csproj" />
