@@ -19,7 +19,7 @@ Here's how my Dropbox looks:
 
 ## Install the tool
 
-`dotnet tool install --global FileSort`
+`dotnet tool install --global file-sort`
 
 ## Options:
 <pre>

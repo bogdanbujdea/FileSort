@@ -4,17 +4,23 @@
     <OutputType>Exe</OutputType>
     <IsPackable>true</IsPackable>
     <PackAsTool>true</PackAsTool>
-    <ToolCommandName>sort-files</ToolCommandName>
-    <Version>1.0.2</Version>
+    <ToolCommandName>file-sort</ToolCommandName>
+    <Version>1.0.1</Version>
     <PackageOutputPath>./nupkg</PackageOutputPath>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <RuntimeFrameworkVersion>2.1.0</RuntimeFrameworkVersion>
     <AssemblyName>FileSort</AssemblyName>
     <ApplicationIcon>icon.ico</ApplicationIcon>
-    <PackageIconUrl>https://raw.githubusercontent.com/thewindev/PicSort/master/src/PicSort.CLI/icon.ico</PackageIconUrl>
-    <RepositoryUrl>https://github.com/thewindev/PicSort</RepositoryUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/thewindev/FileSort/master/src/PicSort.CLI/icon.ico</PackageIconUrl>
+    <RepositoryUrl>https://github.com/thewindev/FileSort</RepositoryUrl>
     <PackageTags>dotnet tool, file sort</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>file-sort</PackageId>
+    <Authors>Bogdan Bujdea</Authors>
+    <Company>file-sort</Company>
+    <Product>file-sort</Product>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <FileVersion>1.0.1.0</FileVersion>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\PicSort.Core\PicSort.Core.csproj" />
