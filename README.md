@@ -13,7 +13,11 @@ I made this tool for sorting the photos from my Dropbox "Camera Uploads" folder.
 </pre>
 
 Here's how my Dropbox looks:
+
 ![](filesort.gif)
+
+# Demo
+![](demo.gif)
 
 # Usage
 
@@ -34,18 +38,18 @@ Here's how my Dropbox looks:
 ## Examples:
 
 ### Sort all files by month: 
-`file-sort -i=month`
+`sort-files -i=month`
 
 ### Sort all files from every subfolder by day: 
 
-`file-sort -i=day -r`
+`sort-files -i=day -r`
 
 ### Sort all files from every subfolder by day, month, year: 
 
-`file-sort -i=day -u -i`
+`sort-files -i=day -u -i`
 
 ### Move every file from every subfolder to the current folder:
 
-`file-sort -m`
+`sort-files -m`
 
 [![Build Status](https://dev.azure.com/bogdan-tfs/PicSort/_apis/build/status/thewindev.PicSort?branchName=master)](https://dev.azure.com/bogdan-tfs/PicSort/_build/latest?definitionId=11&branchName=master)
