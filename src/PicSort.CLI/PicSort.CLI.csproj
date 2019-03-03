@@ -5,9 +5,12 @@
     <IsPackable>true</IsPackable>
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>sort-files</ToolCommandName>
+    <Version>1.0.1</Version>
     <PackageOutputPath>./nupkg</PackageOutputPath>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <RuntimeFrameworkVersion>2.1.0</RuntimeFrameworkVersion>
+    <AssemblyName>FileSort</AssemblyName>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\PicSort.Core\PicSort.Core.csproj" />
