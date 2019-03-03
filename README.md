@@ -34,18 +34,18 @@ Here's how my Dropbox looks:
 ## Examples:
 
 ### Sort all files by month: 
-`sort-files -i=month`
+`file-sort -i=month`
 
 ### Sort all files from every subfolder by day: 
 
-`sort-files -i=day -r`
+`file-sort -i=day -r`
 
 ### Sort all files from every subfolder by day, month, year: 
 
-`sort-files -i=day -u -i`
+`file-sort -i=day -u -i`
 
 ### Move every file from every subfolder to the current folder:
 
-`sort-files -m`
+`file-sort -m`
 
 [![Build Status](https://dev.azure.com/bogdan-tfs/PicSort/_apis/build/status/thewindev.PicSort?branchName=master)](https://dev.azure.com/bogdan-tfs/PicSort/_build/latest?definitionId=11&branchName=master)
