@@ -52,4 +52,4 @@ Here's how my Dropbox looks:
 
 `sort-files -m`
 
-[![Build Status](https://dev.azure.com/bogdan-tfs/PicSort/_apis/build/status/thewindev.PicSort?branchName=master)](https://dev.azure.com/bogdan-tfs/PicSort/_build/latest?definitionId=11&branchName=master)
+[![Build Status](https://dev.azure.com/bogdan-tfs/FileSort/_apis/build/status/thewindev.FileSort?branchName=master)](https://dev.azure.com/bogdan-tfs/FileSort/_build/latest?definitionId=11&branchName=master)

@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/src/FileSort.CLI/FileSort.CLI.csproj"
+                "${workspaceFolder}/FileSort.CLI.csproj"
             ],
             "problemMatcher": "$msCompile"
         }
