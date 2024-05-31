@@ -1,14 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <IsPackable>true</IsPackable>
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>file-sort</ToolCommandName>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <PackageOutputPath>./nupkg</PackageOutputPath>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
-    <RuntimeFrameworkVersion>2.1.0</RuntimeFrameworkVersion>
+    <TargetFramework>net8.0</TargetFramework>
     <AssemblyName>FileSort</AssemblyName>
     <ApplicationIcon>icon.ico</ApplicationIcon>
     <PackageIconUrl>https://raw.githubusercontent.com/thewindev/FileSort/master/src/FileSort.CLI/icon.ico</PackageIconUrl>
@@ -19,15 +17,13 @@
     <Authors>Bogdan Bujdea</Authors>
     <Company>file-sort</Company>
     <Product>file-sort</Product>
-    <AssemblyVersion>1.0.1.0</AssemblyVersion>
-    <FileVersion>1.0.1.0</FileVersion>
+    <AssemblyVersion>1.0.2.0</AssemblyVersion>
+    <FileVersion>1.0.2.0</FileVersion>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\FileSort.Core\FileSort.Core.csproj" />
   </ItemGroup>
-
   <ItemGroup>
-    <PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="2.2.5" />
+    <PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="4.1.1" />
   </ItemGroup>
-
 </Project>
