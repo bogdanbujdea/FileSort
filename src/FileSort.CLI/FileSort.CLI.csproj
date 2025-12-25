@@ -4,12 +4,14 @@
     <IsPackable>true</IsPackable>
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>file-sort</ToolCommandName>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <PackageOutputPath>./nupkg</PackageOutputPath>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <AssemblyName>FileSort</AssemblyName>
-    <ApplicationIcon>icon.ico</ApplicationIcon>
-    <PackageIconUrl>https://raw.githubusercontent.com/thewindev/FileSort/master/src/FileSort.CLI/icon.ico</PackageIconUrl>
+    <ApplicationIcon>icon.png</ApplicationIcon>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>readme.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/thewindev/FileSort</RepositoryUrl>
     <PackageTags>dotnet tool, file sort</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -17,13 +19,19 @@
     <Authors>Bogdan Bujdea</Authors>
     <Company>file-sort</Company>
     <Product>file-sort</Product>
-    <AssemblyVersion>1.0.2.0</AssemblyVersion>
-    <FileVersion>1.0.2.0</FileVersion>
+    <AssemblyVersion>1.0.3.0</AssemblyVersion>
+    <FileVersion>1.0.3.0</FileVersion>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\FileSort.Core\FileSort.Core.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="4.1.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon.png" Pack="true" PackagePath="" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="readme.md" Pack="true" PackagePath="" />
   </ItemGroup>
 </Project>
